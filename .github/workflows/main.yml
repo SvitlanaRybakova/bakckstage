@@ -1,0 +1,16 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [trigger-deployment]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
