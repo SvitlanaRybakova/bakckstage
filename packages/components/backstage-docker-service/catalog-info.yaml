@@ -4,10 +4,15 @@ metadata:
   name: backstage-docker-service
   description: Simple GET server
   tags:
-    - ts
-    - nodeJS
+    - component
+    - backstage
+    - docker
+    - service
+    - nodejs
   annotations:
-    github.com/project-slug: SvitlanaRybakova/backstage-docker-service
+    github.com/project-slug: SvitlanaRybakova/backstage
+    periskop.io/service-name: backstage-docker-service
+    gocd.org/pipelines: backstage,backstage-pr,backstage-builder
 spec:
   type: service
   lifecycle: experimental

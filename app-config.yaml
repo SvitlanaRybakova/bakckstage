@@ -98,7 +98,7 @@ catalog:
 
     ## Uncomment these lines to add more example data
     - type: url
-      target: https://github.com/SvitlanaRybakova/backstage-docker-service/edit/main/catalog-info.yaml
+      target: https://github.com/SvitlanaRybakova/bakckstage/edit/main/packages/components/backstage-docker-service/catalog-info.yaml
 
     ## Uncomment these lines to add an example org
     # - type: url

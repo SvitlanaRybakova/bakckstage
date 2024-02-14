@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: backstage-docker-service
   annotations:
-    github.com/project-slug: SvitlanaRybakova/backstage-docker-service
+    github.com/project-slug: SvitlanaRybakova/backstage
 spec:
   type: service
   lifecycle: experimental
