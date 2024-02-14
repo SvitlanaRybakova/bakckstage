@@ -1,16 +1,26 @@
-name: Build and Deploy
+name: docker image
 
 on:
   push:
     branches:
       - main
-  repository_dispatch:
-    types: [trigger-deployment]
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t sviry/hello-world-app:${{ github.sha }} ./packages/components/backstage-docker-service
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Push Docker image
+        run: docker push sviry/hello-world-app:${{ github.sha }}
