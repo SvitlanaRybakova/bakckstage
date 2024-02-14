@@ -2,10 +2,15 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: backstage-docker-service
+  description: Simple GET server
+  tags:
+    - ts
+    - nodeJS
   annotations:
     github.com/project-slug: SvitlanaRybakova/backstage-docker-service
 spec:
   type: service
   lifecycle: experimental
   owner: SvitlanaRybakova
+
 
